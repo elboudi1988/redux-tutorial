@@ -1,7 +1,10 @@
 import React from 'react';
-import products from '../data.json';
+import { useSelector } from 'react-redux';
 import ProductsList from '../components/Products/ProductsList';
 const Menu = () => {
+
+	const products= useSelector(state=>state.products);
+
 	console.log('prod', products);
 	return (
 		<div>
