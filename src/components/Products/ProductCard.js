@@ -5,7 +5,7 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 import { useLocation } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
-import { addToCartAction,removeFromCartAction,decementQuantityAction,incrementQuantityAction} from '../../redux/actions/cartActions';
+import { addToCartAction,removeFromCartAction,decementQuantityAction,incrementQuantityAction} from '../../redux/actions/menu.action';
 const ProductCard = ({ product }) => {
 	const { pathname } = useLocation();
 	const isInCart = pathname.includes('cart');

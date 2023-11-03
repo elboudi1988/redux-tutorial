@@ -15,8 +15,8 @@ export const addToCartAction=(product)=>{
 }
 export const removeFromCartAction=(productName)=>{
     return{
-    type:CART_ACTION_TYPE.REMOVE_FROM_CART,
-    payload:productName
+        type:CART_ACTION_TYPE.REMOVE_FROM_CART,
+        payload:productName
 }
 }
 export const incrementQuantityAction =(productName)=>{
