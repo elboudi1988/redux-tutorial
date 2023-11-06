@@ -48,15 +48,7 @@ const menuReducer = (state = INTIAL_STATE, action) => {
 			};
 		}
 
-		// 🚀 Create two new cases one for each actions
-		// ⚠️ Don't forget the action types
-		// ❗ Never forget Redux is immutable - Don't mutate the state
-		// ⚠️ what's the scope of your cases?
-		// 🛩️ write your logic within the scope of your cases
 		case CART_ACTION_TYPE.INCREMENT_QUANTITY: {
-			// payload === productName
-			// loop in the cart array and increase the quantity of product with name === payload by 1
-			// increase the carTotal by the same amount as the product price
 			const newCart = [...state.cart].map((product) => {
 				if (product.name === payload) {
 					return { ...product, quantity: product.quantity + 1 };
@@ -71,9 +63,6 @@ const menuReducer = (state = INTIAL_STATE, action) => {
 			};
 		}
 		case CART_ACTION_TYPE.DECREMENT_QUANTITY: {
-			// payload === productName
-			// loop in the cart array and decrease the quantity of product with name === payload by 1
-			// decrease the carTotal by the same amount as the product price
 			const newCart = [...state.cart].map((product) => {
 				if (product.name === payload) {
 					return { ...product, quantity: product.quantity - 1 };

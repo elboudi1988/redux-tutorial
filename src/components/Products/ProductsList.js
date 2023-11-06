@@ -5,7 +5,7 @@ import styles from './products.module.scss';
 const ProductsList = ({ products }) => {
 	return (
 		<div className={styles['products-container']}>
-			{products.length > 0 &&
+			{products > 0 &&
 				products.map((product) => (
 					<ProductCard key={product.name} product={product} />
 				))}
